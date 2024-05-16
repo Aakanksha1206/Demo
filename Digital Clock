@@ -1,0 +1,22 @@
+import time
+from tkinter import Label
+from tkinter import *  # for adding all functions from tkinter
+
+
+def time_current():
+
+    a = time.strftime("%H : %M : %S %p ")
+    time_display.config(text=a)  # config for display time
+    time_display.after(200, time_current)  # after is used for a time you want tim to change
+
+
+tk_window = Tk()
+tk_window.title("My Own Digital Clock")
+
+time_display = Label(tk_window, font=("Arial", 145, "bold", "italic"),
+                     bg="teal", fg="black")
+time_display.pack()  # puts written onto tkinter window #for x & y value use place and for non x & y pack
+
+time_current()
+
+tk_window.mainloop()
