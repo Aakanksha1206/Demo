@@ -1,3 +1,4 @@
+# To create a digital clock
 import time
 from tkinter import Label
 from tkinter import *  # for adding all functions from tkinter
@@ -7,7 +8,7 @@ def time_current():
 
     a = time.strftime("%H : %M : %S %p ")
     time_display.config(text=a)  # config for display time
-    time_display.after(200, time_current)  # after is used for a time you want tim to change
+    time_display.after(200, time_current)  # after is used for delay in time 
 
 
 tk_window = Tk()
